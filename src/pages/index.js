@@ -9,8 +9,6 @@ function HomePage() {
   const events = data.Events;
   var result = Object.keys(events).map((key) => [Number(key), events[key]]);
   context.bullettins = result;
-  console.log("context AFTER assign events: ", context.bullettins);
-  console.log("context assign card: ", context.card);
 
   return (
     <table>
