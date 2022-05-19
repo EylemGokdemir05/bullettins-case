@@ -1,0 +1,149 @@
+@import '_mixings.scss';
+
+html {
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  
+  .List {
+    border: 1px solid #ccc;
+    max-width: 100%;
+
+    @include breakpoint(mobile){
+        background-color: yellow;
+        max-width: 100%;
+    }
+
+    // @include breakpoint(laptop){
+    //     background-color: green;
+    // }
+
+    // @include breakpoint(desktop){
+    //     background-color: blue;
+    // }
+  }
+
+  .tContainer {
+    @include breakpoint(mobile){
+        background-color: green;
+        border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    }
+  }
+
+  .rowStyle {
+    @include breakpoint(mobile) {
+        background-color: yellow;
+        border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .7em;
+    text-align: right;
+    }
+  }
+
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  table tr {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: .35em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+  }
+
+  .headContainer {
+    background-color: #f8f8f8;
+      top: 1rem;
+  }
+
+  .bodyContainer {
+      top: 2rem;
+      padding-right: 2em;
+  }
+
+  .redStyle {
+      color: #d50000;
+      font-weight: bold;
+  }
+
+  .indexStyle {
+      color: #009432;
+      font-weight: bold;
+  }
+
+  .secondContainer {
+    padding-right: 2.5em;
+  }
+
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      // content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+  .ListItemEven,
+  .ListItemOdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
